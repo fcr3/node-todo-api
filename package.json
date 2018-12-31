@@ -1,7 +1,7 @@
 {
   "name": "node-todo-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Todo Database",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
@@ -11,11 +11,12 @@
   "engines": {
     "node": "8.10.0"
   },
-  "author": "",
+  "author": "Christian Reyes",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "lodash": "^4.17.11",
     "mongodb": "^3.1.10",
     "mongoose": "^5.4.1"
   },
