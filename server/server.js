@@ -38,7 +38,7 @@ app.get('/todos/:id', (req, res) => {
     if (!todos) {
       return res.status(404).send();
     }
-    res.send(todos);
+    res.send({todos});
   }).catch((e) => {
     res.status(400).send();
   });
@@ -49,11 +49,11 @@ app.delete('/todos/:id', (req, res) => {
     return res.status(404).send();
   }
 
-  Todo.findOneAndDelete({_id: req.params.id}).then((todo) => {
-    if (!todo) {
+  Todo.findOneAndDelete({_id: req.params.id}).then((todos) => {
+    if (!todos) {
       return res.status(404).send();
     }
-    res.send(todo);
+    res.send({todos});
   }).catch((e) => {
     res.status(400).send();
   });
